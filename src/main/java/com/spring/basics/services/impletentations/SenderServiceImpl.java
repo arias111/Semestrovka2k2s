@@ -11,15 +11,6 @@ import org.springframework.stereotype.Service;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ExecutorService;
 
-/**
- * Created by IntelliJ IDEA.
- * User:  SimonOnBoard
- * Project:  spring-basic-course
- * Package:  com.itis.kpfu.education.simononboard.spring.basics.services.impletentations
- * Date:  26.02.2021
- * Time:  22:24
- */
-
 @Service
 @RequiredArgsConstructor
 public class SenderServiceImpl implements SenderService {
