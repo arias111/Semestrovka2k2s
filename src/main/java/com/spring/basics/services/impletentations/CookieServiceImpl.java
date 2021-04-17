@@ -14,7 +14,6 @@ import java.util.UUID;
 public class CookieServiceImpl implements CookieService {
     private final CookieRepository cookieRepository;
 
-    // TODO: 26.02.2021 Global exception handler - redirect to cookie creation process
     @Override
     public boolean checkCookie(String cookieValue) {
         return cookieValue != null;
