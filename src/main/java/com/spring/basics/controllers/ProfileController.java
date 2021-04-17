@@ -33,7 +33,7 @@ public class ProfileController {
     public String getProfile(@CookieValue(value = "AuthCookie",required = false) String cookie,
                             Model model) {
 
-        model.addAttribute("image",cookieRepository.findByUuid(cookie).get().getUser().getImage());
+       // model.addAttribute("image",cookieRepository.findByUuid(cookie).get().getUser().getImage());
         return "profile";
     }
 

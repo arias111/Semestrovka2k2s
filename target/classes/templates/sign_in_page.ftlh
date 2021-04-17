@@ -19,6 +19,9 @@
     <input name="email" type="email" placeholder="EMAIL"/>
     <label for="password"><@spring.message 'sign_up_page.registration.password'/></label>
     <input name="password" type="password" placeholder="PASSWORD"/>
+    <label>
+        <input type="checkbox" name="remember-me">Запомнить меня
+    </label>
     <input type="submit" value=<@spring.message 'sign_up_page.registration.signin'/> />
 </form>
 </@m.page>
