@@ -18,4 +18,5 @@ public class SignUpForm extends UserAuthForm{
     private String username;
     @Email(message = "incorrect email")
     private String email;
+    private String phone;
 }

@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -73,7 +74,7 @@ public class SignInController {
             httpServletResponse.addCookie(cookie);
             return authUserRedirectUrl;
         }
-        redirectAttributes.addAttribute("error", "Login on password incorrect ( S W W )");
+        redirectAttributes.addAttribute("error", "Login on password incorrect");
         return "redirect:/signIn";
     }
 }

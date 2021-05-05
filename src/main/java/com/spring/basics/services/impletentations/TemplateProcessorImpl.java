@@ -13,7 +13,6 @@ public class TemplateProcessorImpl implements TemplateProcessor {
     private Map<String,String> template;
 
     public TemplateProcessorImpl(TemplateResolver templateResolver,
-                                 // TODO: 27.02.2021 что заинжектится сюда вместо конкретного бина самим спрингом если я не укажу квалифаер
                                  @Qualifier(value = "templateParameters") Map<String, String> templateParameters) {
         this.templateResolver = templateResolver;
         this.template = templateParameters;

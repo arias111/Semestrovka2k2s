@@ -5,9 +5,11 @@ import com.spring.basics.services.interfaces.MailService;
 import com.spring.basics.services.interfaces.SenderService;
 import com.spring.basics.services.interfaces.TemplateProcessor;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.sql.Template;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,9 +19,9 @@ import java.util.Map;
 public class MailServiceImpl implements MailService {
     private final TemplateProcessor templateProcessor;
     private final SenderService senderService;
-
     @Value("${server.basic.address}")
     private String serverBasicAddress;
+
 
     @Override
     public void sendMail(UserDto userDto) {
@@ -28,6 +30,7 @@ public class MailServiceImpl implements MailService {
         parameters.put("link", serverBasicAddress + "confirm/" + userDto.getCode());
         sendMail(parameters, "mail.ftl", userDto.getEmail(), "Confirm your registration");
     }
+
 
 
     private void sendMail(Map<String, String> parameters, String template, String email, String subject) {

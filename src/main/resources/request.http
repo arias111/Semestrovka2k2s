@@ -1,0 +1,20 @@
+POST http://localhost:8345/signInToken
+Content-Type: application/json
+
+{
+  "email": "newUser4@mail.ru",
+  "password": "1234"
+}
+
+###
+
+GET http://localhost:8345/users
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1IiwibmFtZSI6Im5ld1VzZXI0Iiwicm9sZSI6IkFETUlOIn0.PZU5UU09xdTNINiiXrmyveIaDZIfCobFfcDDEUIg1Fk
+
+###
+
+GET http://localhost:8345/categories/1/productsList/search?page=0&size=2
+
+###
+
+GET http://localhost:8345/categories/2

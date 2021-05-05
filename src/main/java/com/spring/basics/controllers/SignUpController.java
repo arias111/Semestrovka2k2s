@@ -5,7 +5,9 @@ import com.spring.basics.dto.forms.SignUpForm;
 import com.spring.basics.services.interfaces.CookieService;
 import com.spring.basics.services.interfaces.MailService;
 import com.spring.basics.services.interfaces.SignUpService;
+import com.spring.basics.services.interfaces.SmsService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.stereotype.Controller;
@@ -26,6 +28,7 @@ public class SignUpController {
     private final CookieService cookieService;
     private final SignUpService signUpService;
     private final MailService mailService;
+
 
     @Value("${auth.user.redirect.url}")
     private String authUserRedirectUrl;

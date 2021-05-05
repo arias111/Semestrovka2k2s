@@ -8,14 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-/**
- * Created by IntelliJ IDEA.
- * User:  SimonOnBoard
- * Project:  spring-basic-course
- * Package:  com.itis.kpfu.education.simononboard.spring.basics.services.impletentations
- * Date:  27.02.2021
- * Time:  0:03
- */
 @Service
 @RequiredArgsConstructor
 public class ConfirmationServiceImpl implements ConfirmationService {
